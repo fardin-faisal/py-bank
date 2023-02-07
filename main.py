@@ -9,14 +9,14 @@ class Bank_system:
 
     def withdraw (Faisal , amount):
         if amount < Faisal.min_withdraw:
-            return f"no money for you. Minimum need to take {Faisal.min_withdraw} taka"
+            return "Bangti nai!!!"
         elif amount > Faisal.max_withdraw:
-            return f"crosses max limit : {Faisal.max_withdraw}"
+            return "Boshte dile suite cas!!!"
         elif amount > Faisal.balance:
-            return "No money sorry"
+            return "Tui gorib re vai!!!"
         else:
             Faisal.balance = Faisal.balance - amount
-            return f"Here is yuor money : {amount}"
+            return f"Tui succesfully {amount} tk withdraw korsos!"
 
     def deposit(Faisal, amount):
         Faisal.balance = Faisal.balance + amount
